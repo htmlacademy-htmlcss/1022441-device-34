@@ -3,10 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
+    <div class="wrapper">
+      <h1 class="visually-hidden">Интернет-магазин DEVICE</h1>
+      <header class="page-header">
+        <div class="page-header-container">
+          <a class="page-header-logo" href="index.html"><img src="images/logo/device-logo.svg" width="145" height="36" alt="Логотип DEVICE."></a>
+          <div class="page-header-service">
+            <form class="site-search-form" method="get" action="https://echo.htmlacademy.ru">
+              <h2 class="visually-hidden">Форма поиска по сайту</h2>
+              <div class="search-controls">
+                <label for="site-search-input"></label>
+                <input class="site-search-input" type="search" name="search-field" id="site-search-input" placeholder="Поиск по сайту">
+                <button class="site-search-button" type="submit">Найти</button>
+              </div>
+            </form>
+            <ul class="navigation-user">
+              <h2 class="visually-hidden">Меню пользователя сайта</h2>
+              <li class="navigation-user-item first">
+                <a class="navigation-user-link login hidden" href="#">Войти</a>
+                <a class="navigation-user-link profile" href="#">Коля Петухов</a>
+                <a class="navigation-user-link logout" href="#">Выйти</a>
+              </li>
+              <li class="navigation-user-item">
+                <a class="navigation-user-link compare" href="#">Сравнить</a>
+              </li>
+              <li class="navigation-user-item">
+                <a class="navigation-user-link cart" href="#"><span class="badge">2</span>Корзина</a>
+              </li>
+            </ul>
+          </div>
+          <nav class="page-header-navigation">
+            <h2 class="visually-hidden">Навигация по сайту</h2>
+            
+          </nav>
+        </div>
+      </header>
+      <main class="main-container">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+      </main>
+      <footer class="main-footer"></footer>
+    </div>
   </body>
 </html>
