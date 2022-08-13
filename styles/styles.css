@@ -34,14 +34,14 @@
   overflow: hidden;
 }
 
-html {
+html, body {
+  box-sizing: border-box;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -60,8 +60,14 @@ body {
   padding: 0 140px;
   min-height: 100%;
   background-color: #FFFFFF;
-  border-left: 1px solid silver;
-  border-right: 1px solid silver;
+}
+.page-header,
+.page-footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.page-body {
+  flex-grow: 1;
 }
 
 .page-header {
@@ -74,6 +80,7 @@ body {
 }
 .page-header-container {
   position: relative;
+  box-sizing: border-box;
   padding: 43px 44px 23px 60px;
   background-color: #FFE17F;
 }
@@ -130,6 +137,9 @@ body {
   line-height: 20px;
   background-color: transparent;
 }
+.site-search-button:focus {
+  outline: none;
+}
 .site-search-button:hover,
 .site-search-button:active {
   background: #000000;
@@ -168,7 +178,8 @@ body {
 }
 .navigation-user-link:focus {
   opacity: unset;
-  border: 2px solid #AF4FFF;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 .navigation-user-link:hover {
   opacity: 0.6;
@@ -240,3 +251,148 @@ body {
   display: none;
 }
 /***** Navigation User Menu End  *****/
+
+/***** Site Main Navigation  *****/
+
+.page-header-navigation {
+  padding: 4px 0 36px 0;
+  box-sizing: border-box;
+  background-color: #FFE17F;
+}
+
+.header-main-menu {
+  position: relative;
+  display: grid;
+  grid-template-columns: 292px auto 166px 166px 179px;
+  margin: 0 12px 0 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.main-menu-item {
+  display: flex;
+  position: relative;
+  width: max-content;
+  justify-self: right;
+  align-items: center;
+}
+.main-menu-item.first {
+  justify-self: left;
+}
+
+.main-menu-link {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+.main-menu-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.catalog-link {
+  display: flex;
+  align-items: center;
+}
+.catalog-icon {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000000;
+  opacity: 0.3;
+  border-radius: 50%;
+  background-image: url("../images/icons/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-position: center center;
+  margin-left: 11px;
+}
+/** Catalog SubMenu **/
+
+.dropdown-menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max-content, 182px));
+  width: 1160px;
+  box-sizing: border-box;
+  padding: 11px 60px 40px 60px;
+  column-gap: 30px;
+  position: absolute;
+  top: 54px;
+  left: -60px;
+  z-index: 100;
+  background-color: #FFE17F;
+}
+
+.dropdown-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+}
+.dropdown-menu:first-child {
+  width: 222px;
+}
+.dropdown-menu-item {
+  margin: 0 0 17px 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*.dropdown-menu-item::after {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #FFE17F;
+  padding-top: 4px;
+}*/
+/*.dropdown-menu-item:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.dropdown-menu-item:active::after {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #000000;
+  padding-top: 4px;
+}*/
+
+.main-menu-item:hover .dropdown-menu-container,
+.main-menu-item:focus-within .dropdown-menu-container {
+  display: grid;
+}
+
+.dropdown-menu-link {
+  display: block;
+  width: max-content;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+.dropdown-menu-link::after {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #FFE17F;
+  padding-top: 4px;
+}
+.dropdown-menu-link:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.dropdown-menu-link:active::after {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #000000;
+  padding-top: 4px;
+}
+/***** Site Main Navigation End  *****/
+
+.page-footer {
+  background-color: #444444;
+}
+
