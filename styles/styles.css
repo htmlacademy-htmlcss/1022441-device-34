@@ -46,6 +46,7 @@ body {
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
+  font-style: normal;
   background-color: #FFFFFF;
   color: #444444;
 }
@@ -61,6 +62,41 @@ body {
   min-height: 100%;
   background-color: #FFFFFF;
 }
+/* Site Buttons */
+.button,
+.button:visited {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  min-width: 249px;
+  box-sizing: border-box;
+  padding: 18px 39px;
+  color: #000000;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border: 3px solid #000000;
+}
+
+
+.button:focus-visible {
+  outline: none;
+}
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+.button.disabled {
+  background-color: #E5E5E5;
+  cursor: not-allowed;
+}
+
 .page-header,
 .page-footer {
   flex-grow: 0;
@@ -88,6 +124,18 @@ body {
 .page-header-logo {
   position: absolute;
   top: -20px;
+  display: block;
+  height: 36px;
+}
+.page-header-logo:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.page-header-logo:hover {
+  opacity: 0.6;
+}
+.page-header-logo:active {
+  opacity: 0.3;
 }
 
 .page-header-service {
@@ -250,6 +298,138 @@ body {
 .navigation-user-link.hidden {
   display: none;
 }
+
+.tooltip-toggle:hover .children-info-popup,
+.tooltip-toggle:focus .children-info-popup {
+  display: block;
+}
+/** Cart Info PopUp **/
+.cart-info-popup {
+  position: absolute;
+  top: 15px;
+  left: 37px;
+  display: block;
+  z-index: 1;
+  background: #000000;
+  box-shadow: 0 15px 30px rgb(0 0 0 / 30%);
+  width: 320px;
+  padding: 0 0 20px 0;
+  box-sizing: border-box;
+  transform: translate(-50%, 25px);
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.cart-info-popup:before {
+  display: block;
+  position: absolute;
+  top: -15px;
+  box-sizing: border-box;
+  margin-left: -11px;
+  left: 50%;
+  content: ' ';
+  border-color: transparent transparent #000000 transparent;
+  border-style: solid;
+  border-width: 11px;
+}
+
+.popup-cart-item {
+  display: grid;
+  grid-template-columns: 233px auto;
+  padding: 20px 0 19px 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(255,255,255, 0.1);
+}
+
+.popup-cart-item-link {
+  display: grid;
+  grid-template-columns: 63px 170px;
+  text-decoration: none;
+  padding: 0 0 0 20px;
+}
+.item-delete-button {
+  display: block;
+  padding-right: 20px;
+}
+.popup-cart-item-link:focus,
+.item-delete-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.popup-cart-item-link:hover,
+.item-delete-button:hover {
+  opacity: 0.6;
+}
+.popup-cart-item-link:active,
+.item-delete-button:active {
+  opacity: 0.3;
+}
+
+.popup-cart-item-text {
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.popup-cart-item-delete {
+  justify-self: right;
+}
+.item-delete-image {
+  display: block;
+}
+.cart-info-popup-total {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  background-color: #1A1A1A;
+  list-style: none;
+  margin: 0;
+  padding: 11px 20px 12px 20px;
+}
+.total-products {
+  justify-self: left;
+}
+.total-sum {
+  justify-self: right;
+}
+.popover-button {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #000000;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  margin: 20px 20px 0 20px;
+}
+.popover-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.popover-button:hover {
+  background-color: #FFE17F;
+}
+.popover-button:active {
+  color: rgba(0, 0, 0, 0.3);
+  outline: unset;
+}
+.popover-button:disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
 /***** Navigation User Menu End  *****/
 
 /***** Site Main Navigation  *****/

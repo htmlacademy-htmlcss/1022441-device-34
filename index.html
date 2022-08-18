@@ -31,7 +31,36 @@
                 <a class="navigation-user-link compare" href="#">Сравнить</a>
               </li>
               <li class="navigation-user-item">
-                <a class="navigation-user-link cart" href="#"><span class="badge">2</span>Корзина</a>
+                <a class="navigation-user-link cart" aria-labelledby="cart-tooltip-label" href="#"><span class="badge">2</span>Корзина</a>
+                <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label">
+                  <ul class="popup-cart-item">
+                    <li>
+                      <a href="#" class="popup-cart-item-link">
+                        <img class="popup-cart-item-image" src="images/photos/product-1-small.png" alt="Любительская селфи-палка." width="39" height="43">
+                        <span class="popup-cart-item-text">Любительская селфи-палка</span>
+                      </a>
+                    </li>
+                    <li class="popup-cart-item-delete">
+                      <a href="#" class="item-delete-button"><img class="item-delete-image" src="images/icons/icon-cross-white.svg" width="10" height="11" alt="Удалить из корзины."></a>
+                    </li>
+                  </ul>
+                  <ul class="popup-cart-item">
+                    <li>
+                      <a href="#" class="popup-cart-item-link">
+                        <img class="popup-cart-item-image" src="images/photos/product-2-small.png" alt="Любительская селфи-палка." width="39" height="43">
+                        <span class="popup-cart-item-text">Профессиональная селфи-палка</span>
+                      </a>
+                    </li>
+                    <li class="popup-cart-item-delete">
+                      <a href="#" class="item-delete-button"><img class="item-delete-image" src="images/icons/icon-cross-white.svg" width="10" height="11" alt="Удалить из корзины."></a>
+                    </li>
+                  </ul>
+                  <div class="cart-info-popup-total">
+                    <div class="total-products">Товаров: 2</div>
+                    <div class="total-sum">Сумма: 2000 ₽</div>
+                  </div>
+                  <a href="#" class="popover-button">Открыть корзину</a>
+                </div>
               </li>
             </ul>
           </div>
