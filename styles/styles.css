@@ -117,7 +117,7 @@ body {
 .page-header-container {
   position: relative;
   box-sizing: border-box;
-  padding: 43px 44px 23px 60px;
+  padding: 43px 44px 0 60px; /*23*/
   background-color: #FFE17F;
 }
 
@@ -309,7 +309,7 @@ body {
   top: 15px;
   left: 37px;
   display: block;
-  z-index: 1;
+  z-index: 100;
   background: #000000;
   box-shadow: 0 15px 30px rgb(0 0 0 / 30%);
   width: 320px;
@@ -333,10 +333,12 @@ body {
   border-style: solid;
   border-width: 11px;
 }
-
+.cart-info-popup.hidden {
+  display: none;
+}
 .popup-cart-item {
   display: grid;
-  grid-template-columns: 233px auto;
+  grid-template-columns: 270px auto;
   padding: 20px 0 19px 0;
   margin: 0;
   list-style: none;
@@ -348,13 +350,15 @@ body {
 
 .popup-cart-item-link {
   display: grid;
-  grid-template-columns: 63px 170px;
+  grid-template-columns: 63px 187px;
+  box-sizing: border-box;
   text-decoration: none;
-  padding: 0 0 0 20px;
+  padding: 0;
+  margin-left: 20px;
 }
 .item-delete-button {
   display: block;
-  padding-right: 20px;
+  margin-right: 20px;
 }
 .popup-cart-item-link:focus,
 .item-delete-button:focus {
@@ -425,8 +429,14 @@ body {
   color: rgba(0, 0, 0, 0.3);
   outline: unset;
 }
-.popover-button:disabled {
+.popover-button:disabled,
+.popover-button.disabled,
+.popover-button.disabled:focus,
+.popover-button.disabled:hover {
+  background-color: #FFFFFF;
+  outline: unset;
   color: rgba(0, 0, 0, 0.3);
+  cursor: not-allowed;
 }
 
 
@@ -435,7 +445,7 @@ body {
 /***** Site Main Navigation  *****/
 
 .page-header-navigation {
-  padding: 4px 0 36px 0;
+  padding: 4px 0 1px 0;
   box-sizing: border-box;
   background-color: #FFE17F;
 }
@@ -545,9 +555,9 @@ body {
   padding: 11px 60px 40px 60px;
   column-gap: 30px;
   position: absolute;
-  top: 54px;
+  top: 51px;
   left: -60px;
-  z-index: 100;
+  z-index: 1000;
   background-color: #FFE17F;
 }
 .dropdown-menu {
@@ -605,6 +615,249 @@ body {
   margin-bottom: 0;
 }
 /***** Site Main Navigation End  *****/
+
+/***** Slider Start *****/
+
+.slider-container {
+  position: relative;
+}
+.slider::before {
+  content: "";
+  position: relative;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 135px;
+  background-color: #FFE17F;
+}
+
+.slider-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -150px 0 0 0; /*-121*/
+  padding: 0;
+  list-style-type: none;
+}
+
+.slider-item {
+  display: grid;
+  grid-template-columns: 560px 560px;
+  gap: 40px;
+}
+.slider-item.hidden {
+  display: none;
+}
+.slider-item-image {
+  display: block;
+  z-index: 100;
+}
+.slider-item-content {
+  position: relative;
+  top: 29px;
+}
+.slider-info-container {
+  position: relative;
+  padding-bottom: 203px;
+}
+
+.slider-product-number {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  z-index: 0;
+  height: 121px;
+  line-height: 135px;
+  overflow: hidden;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 180px;
+  color: #FFFFFF;
+}
+.slider-item-title {
+  position: absolute;
+  top: 93px;
+  left: 0;
+  z-index: 0;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+.slider-item-description {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.slider-item-more-button {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  padding: 9px 18px 10px 22px;
+  min-width: 180px;
+  vertical-align: middle;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  margin-top: 32px;
+}
+.slider-item-more-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: calc(50% - 1px);
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  transition: height .3s ease-in-out;
+}
+.slider-item-more-button:active::before,
+.slider-item-more-button:hover::before {
+  height: 100%;
+}
+.slider-item-more-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+.slider-item-more-button:focus::before {
+  top: 50%;
+}
+
+.slider-item-more-button:hover::before {
+  background-color: #FFE17F;
+  outline: unset;
+}
+.slider-item-more-button:active::before {
+  background-color: #FFCC33;
+  outline: unset;
+}
+
+.slider-item-more-button.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.slider-item-more-button.disabled:focus {
+  outline: unset;
+}
+.slider-item-more-button.disabled:hover::before {
+  background-color: #FFE17F;
+  height: 8px;
+}
+
+.slider-controls {
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  top: 196px;
+  left: 30px;
+  justify-content: space-between;
+  width: 530px;
+}
+
+.slider-button {
+  width: 20px;
+  height: 60px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-image: url("../images/slider/slider-arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  outline: unset;
+}
+.slider-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.slider-button:hover {
+  opacity: 0.6;
+}
+.slider-button:active {
+  opacity: 0.3;
+  outline: unset;
+}
+.slider-button:disabled {
+  opacity: 0.1;
+  outline: unset;
+}
+.slider-prev {
+  transform: rotate(180deg);
+}
+
+.slider-pagination {
+  position: absolute;
+  bottom: 173px;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider-pagination-item {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+.slider-pagination-button {
+  display: block;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-pagination-item:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.slider-pagination-button:hover {
+  opacity: 0.6;
+  outline: none;
+}
+.slider-pagination-button:active {
+  opacity: 0.3;
+  outline: none;
+}
+.slider-pagination-button:disabled {
+  opacity: 0.1;
+  cursor: not-allowed;
+}
+
+.slider-pagination-button-current {
+  background-color: #000000;
+}
+
+/***** Slider End *****/
 
 .page-footer {
   background-color: #444444;

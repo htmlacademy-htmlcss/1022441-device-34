@@ -32,12 +32,12 @@
               </li>
               <li class="navigation-user-item">
                 <a class="navigation-user-link cart" aria-labelledby="cart-tooltip-label" href="#"><span class="badge">2</span>Корзина</a>
-                <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label">
+                <div class="cart-info-popup hidden" role="tooltip" id="cart-tooltip-label">
                   <ul class="popup-cart-item">
                     <li>
                       <a href="#" class="popup-cart-item-link">
                         <img class="popup-cart-item-image" src="images/photos/product-1-small.png" alt="Любительская селфи-палка." width="39" height="43">
-                        <span class="popup-cart-item-text">Любительская селфи-палка</span>
+                        <span class="popup-cart-item-text">Любительская<br> селфи-палка</span>
                       </a>
                     </li>
                     <li class="popup-cart-item-delete">
@@ -69,7 +69,6 @@
             <ul class="header-main-menu">
               <li class="main-menu-item first">
                 <a class="main-menu-link catalog-link" href="#">Каталог товаров<span class="catalog-icon"></span></a>
-
                 <div class="dropdown-menu-container">
                   <ul class="dropdown-menu">
                     <li class="dropdown-menu-item">
@@ -111,8 +110,72 @@
           </nav>
         </div>
       </header>
-      <main class="page-body" style="background-color: bisque">
-
+      <main class="page-body">
+        <section class="slider-container">
+          <h2 class="visually-hidden">Слайдер товаров</h2>
+          <div class="slider">
+            <ol class="slider-list">
+              <li class="slider-item">
+                <img class="slider-item-image" src="images/slider/slider-1.png" alt="Примеры работ." width="560" height="560">
+                <div class="slider-item-content">
+                  <div class="slider-info-container">
+                    <span class="slider-product-number">01</span>
+                    <h3 class="slider-item-title">Порхает как бабочка, жалит как пчела!</h3>
+                  </div>
+                  <p class="slider-item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+                  <a class="slider-item-more-button" href="#">Подробнее</a>
+                </div>
+              </li>
+              <li class="slider-item hidden">
+                <img class="slider-item-image" src="images/slider/slider-2.png" alt="Примеры работ." width="560" height="560">
+                <div class="slider-item-content">
+                  <div class="slider-info-container">
+                    <span class="slider-product-number">02</span>
+                    <h3 class="slider-item-title">Худеем<br>правильно!</h3>
+                  </div>
+                  <p class="slider-item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                  <a class="slider-item-more-button" href="#">Подробнее</a>
+                </div>
+              </li>
+              <li class="slider-item hidden">
+                <img class="slider-item-image" src="images/slider/slider-3.png" alt="Примеры работ." width="560" height="560">
+                <div class="slider-item-content">
+                  <div class="slider-info-container">
+                    <span class="slider-product-number">03</span>
+                    <h3 class="slider-item-title">Делай селфи,<br>как Бен Стиллер! </h3>
+                  </div>
+                  <p class="slider-item-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+                  <a class="slider-item-more-button" href="#">Подробнее</a>
+                </div>
+              </li>
+            </ol>
+            <div class="slider-controls">
+              <button class="slider-button slider-next" type="button">
+                <span class="visually-hidden">Предыдущее фото</span>
+              </button>
+              <button class="slider-button slider-prev" type="button">
+                <span class="visually-hidden">Следующее фото</span>
+              </button>
+            </div>
+            <ol class="slider-pagination">
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                  <span class="visually-hidden">1 фото</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">2 фото</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">3 фото</span>
+                </button>
+              </li>
+            </ol>
+          </div>
+        </section>
       </main>
       <footer class="page-footer">
         <div style="width: 100%; height: 300px;"></div>
