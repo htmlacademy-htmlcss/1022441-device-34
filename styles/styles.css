@@ -535,7 +535,6 @@ body {
   border-radius: 50%;
   background-image: url("../images/icons/icon-plus.svg");
   background-repeat: no-repeat;
-  background-size: 22px 22px;
   background-position: center center;
   margin-left: 11px;
 }
@@ -727,23 +726,24 @@ body {
   content: "";
   position: absolute;
   z-index: -1;
-  top: calc(50% - 1px);
-  left: 0;
-  transform: translateY(-50%);
   width: 100%;
-  height: 8px;
   background-color: #FFE17F;
-  transition: height .3s ease-in-out;
+  left: 0;
+  top: 15px;
+  bottom: 17px;
+  transition: top .3s ease-in-out, bottom .3s ease-in-out;
+}
+.slider-item-more-button:focus::before {
+  top: 15px;
+  bottom: 17px;
 }
 .slider-item-more-button:active::before,
 .slider-item-more-button:hover::before {
-  height: 100%;
+  top: 0;
+  bottom: 0;
 }
 .slider-item-more-button:focus {
   outline: 2px solid #AF4FFF;
-}
-.slider-item-more-button:focus::before {
-  top: 50%;
 }
 
 .slider-item-more-button:hover::before {
