@@ -496,6 +496,7 @@ body {
 }
 .main-menu-link:focus {
   outline: 2px solid #AF4FFF;
+  z-index: 111;
 }
 .main-menu-link:hover {
   opacity: 0.6;
@@ -555,9 +556,9 @@ body {
   padding: 11px 60px 40px 60px;
   column-gap: 30px;
   position: absolute;
-  top: 51px;
+  top: 54px;
   left: -60px;
-  z-index: 1000;
+  z-index: 112;
   background-color: #FFE17F;
 }
 .dropdown-menu {
@@ -766,6 +767,31 @@ body {
   height: 8px;
 }
 
+.slider-item-parameters-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px,max-content));
+  column-gap: 40px;
+  margin-top: 47px;
+  align-content: start;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.parameters-list-item {
+  display: flex;
+  flex-direction: column;
+}
+.list-item-name {
+  order: 1;
+  font-size: 16px;
+  line-height: 30px;
+}
+.list-item-value {
+  font-size: 36px;
+  line-height: 30px;
+  color: #000000;
+  margin:0 0 12px 0;
+}
 .slider-controls {
   display: flex;
   position: absolute;
