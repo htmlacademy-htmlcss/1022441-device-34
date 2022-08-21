@@ -111,9 +111,9 @@
         </div>
       </header>
       <main class="page-body">
-        <section class="slider-container">
+        <section class="slider">
           <h2 class="visually-hidden">Слайдер товаров</h2>
-          <div class="slider">
+          <div class="slider-control">
             <ol class="slider-list">
               <li class="slider-item hidden">
                 <img class="slider-item-image" src="images/slider/slider-1.png" alt="Примеры работ." width="560" height="560">
@@ -123,7 +123,7 @@
                     <h3 class="slider-item-title">Порхает как бабочка, жалит как пчела!</h3>
                   </div>
                   <p class="slider-item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                  <a class="slider-item-more-button" href="#">Подробнее</a>
+                  <a class="button-fade slider-item-more-button" href="#">Подробнее</a>
                   <dl class="slider-item-parameters-list">
                     <div class="parameters-list-item">
                       <dt class="list-item-name">Дальность полета</dt>
@@ -144,7 +144,7 @@
                     <h3 class="slider-item-title">Худеем<br>правильно!</h3>
                   </div>
                   <p class="slider-item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-                  <a class="slider-item-more-button" href="#">Подробнее</a>
+                  <a class="button-fade slider-item-more-button" href="#">Подробнее</a>
                   <dl class="slider-item-parameters-list">
                     <div class="parameters-list-item">
                       <dt class="list-item-name">Без подзарядки</dt>
@@ -161,7 +161,7 @@
                     <h3 class="slider-item-title">Делай селфи,<br>как Бен Стиллер! </h3>
                   </div>
                   <p class="slider-item-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-                  <a class="slider-item-more-button" href="#">Подробнее</a>
+                  <a class="button-fade slider-item-more-button" href="#">Подробнее</a>
                   <dl class="slider-item-parameters-list">
                     <div class="parameters-list-item">
                       <dt class="list-item-name">Длина палки</dt>
@@ -179,7 +179,7 @@
                 </div>
               </li>
             </ol>
-            <div class="slider-controls">
+            <div class="slider-buttons">
               <button class="slider-button slider-next" type="button">
                 <span class="visually-hidden">Предыдущее фото</span>
               </button>
@@ -246,6 +246,36 @@
               </a>
             </li>
           </ul>
+        </section>
+        <section class="services">
+          <div class="services-tab-container">
+            <h2 class="visually-hidden">Наши услуги</h2>
+            <ul class="services-navigation">
+              <li class="services-navigation-item current">
+                <a class="services-button" href="#">Доставка</a>
+              </li>
+              <li class="services-navigation-item">
+                <a class="button-fade services-button" href="#">Гарантия</a>
+              </li>
+              <li class="services-navigation-item">
+                <a class="button-fade services-button" href="#">Кредит</a>
+              </li>
+            </ul>
+            <ul class="services-description">
+                <li class="services-description-item delivery current">
+                  <h3 class="services-description-item-title">Доставка</h3>
+                  <p class="services-description-item-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь<br> мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                </li>
+                <li class="services-description-item warranty">
+                  <h3 class="services-description-item-title">Гарантия</h3>
+                  <p class="services-description-item-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+                </li>
+                <li class="services-description-item credit">
+                  <h3 class="services-description-item-title">Кредит</h3>
+                  <p class="services-description-item-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+                </li>
+              </ul>
+          </div>
         </section>
       </main>
       <footer class="page-footer">
