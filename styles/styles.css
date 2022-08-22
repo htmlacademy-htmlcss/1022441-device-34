@@ -956,6 +956,7 @@ body {
 .services {
   background-color: #F0F0F0;
   background-image: linear-gradient(180deg,#FFFFFF 102px,#F0F0F0 102px);
+  margin-bottom: 70px;
 }
 .services-tab-container {
   display: flex;
@@ -1063,6 +1064,75 @@ body {
   padding: 0;
 }
 /***** Services List End *****/
+.promo {
+  width: 1160px;
+  margin: 0 auto 70px auto;
+}
+.promo-link {
+  display: flex;
+  align-items: center;
+  background-color: #F0F0F0;
+  text-decoration: none;
+}
+.promo-image {
+  display: block;
+  width: 125px;
+  height: 100px;
+  background-color: #FFE17F;
+  background-image: url("../images/icons/icon-truck.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+.promo-text {
+  flex-grow: 1;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.promo-info {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-right: 43px;
+  margin-left: 42px;
+  border-radius: 50%;
+  background-color: rgba(220, 220, 220, 0.5);
+  background-image: url("../images/icons/icon-info-default.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.promo-link:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.promo-link:hover .promo-image {
+  background-color: #FFC700;
+}
+.promo-link:hover .promo-info {
+  background-image: url("../images/icons/icon-info-hover.svg");
+}
+.promo-link:active {
+  opacity: 0.3;
+}
+.promo-link:active .promo-image {
+  background-color: #FFC700;
+}
+.promo-link:active .promo-info {
+  background-image: url("../images/icons/icon-info-hover.svg");
+  opacity: 1;
+}
 
 .page-footer {
   background-color: #444444;
