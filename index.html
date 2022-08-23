@@ -32,7 +32,7 @@
               </li>
               <li class="navigation-user-item">
                 <a class="navigation-user-link cart" aria-labelledby="cart-tooltip-label" href="#"><span class="badge">2</span>Корзина</a>
-                <div class="cart-info-popup hidden" role="tooltip" id="cart-tooltip-label">
+                <div class="cart-info-popup visible" role="tooltip" id="cart-tooltip-label">
                   <ul class="popup-cart-item">
                     <li>
                       <a href="#" class="popup-cart-item-link">
@@ -307,6 +307,18 @@
             <p class="description">пн—пт: с 10:00 до 22:00<br>сб—вс: с 10:00 до 19:00</p>
             <a class="button-fade contacts-button" href="#">Напишите нам</a>
           </section>
+        </section>
+        <section class="subscription">
+          <div class="subscription-info-container">
+            <h2 class="subscription-title">Подпишитесь<br>на рассылку</h2>
+            <p class="subscription-info">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+            <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
+              <label for="subscription-form-email" class="visually-hidden">Ваш e-mail</label>
+              <input class="subscription-form-input" type="email" name="subscription-form-email" id="subscription-form-email" placeholder="Ваш e-mail">
+              <button class="button subscription-button" type="submit">ПОДПИСАТЬСЯ</button>
+            </form>
+            <span class="mark">Это бесплатно</span>
+          </div>
         </section>
       </main>
       <footer class="page-footer">

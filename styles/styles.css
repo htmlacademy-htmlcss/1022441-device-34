@@ -172,7 +172,6 @@ body {
 }
 .page-body {
   flex-grow: 1;
-  padding-bottom: 150px;
 }
 
 .page-header {
@@ -374,11 +373,11 @@ body {
 }
 /** Cart Info PopUp **/
 .cart-info-popup {
+  display: none;
   position: absolute;
   top: 15px;
   left: 37px;
-  display: block;
-  z-index: 100;
+  z-index: 120;
   background: #000000;
   box-shadow: 0 15px 30px rgb(0 0 0 / 30%);
   width: 320px;
@@ -402,8 +401,8 @@ body {
   border-style: solid;
   border-width: 11px;
 }
-.cart-info-popup.hidden {
-  display: none;
+.cart-info-popup.visible {
+  display: block;
 }
 .popup-cart-item {
   display: grid;
@@ -1211,6 +1210,93 @@ body {
   width: 259px;
 }
 /***** About Company End *****/
+
+/***** Subscription Start *****/
+
+.subscription {
+  background-color: #F0F0F0;
+  padding: 74px 0 46px 0;
+}
+.subscription-info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 1160px;
+  margin: 0 auto 0 auto;
+}
+.subscription-title {
+  margin: 0 257px 144px 8px;
+  padding: 0;
+  width: 342px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+}
+.subscription-info {
+  padding: 0;
+  margin: 0;
+  width: 532px;
+}
+.subscription-form {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 810px;
+}
+.subscription-form-input {
+  min-width: 557px;
+  height: 57px;
+  box-sizing: border-box;
+  padding: 12px 10px 13px 17px;
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
+  outline: none;
+  background-color: #F0F0F0;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  opacity: 0.5;
+}
+
+.subscription-button {
+  padding: 12px 15px;
+  margin: 0 189px 0 0;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 18px;
+  line-height: 21px;
+  border: 3px solid #C4C4C4;
+  background-color: #F0F0F0;
+}
+.subscription-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.subscription-button:hover {
+  border: 3px solid #000000;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.subscription-button:active {
+  border: 3px solid #000000;
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.mark {
+  display: block;
+  align-self: center;
+  padding: 1px 0 0 32px;
+  margin: 0 0 0 188px;
+  background-image: url("../images/icons/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position-x: 0px;
+  background-position-y: 8px;
+}
+/***** Subscription End *****/
 
 .page-footer {
   background-color: #444444;
