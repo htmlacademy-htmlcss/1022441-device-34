@@ -267,7 +267,7 @@ body {
 }
 /***** Navigation User Menu  *****/
 
-.navigation-user {
+.navigation-user-list {
   flex-basis: 515px;
   display: flex;
   justify-content: space-between;
@@ -1329,6 +1329,7 @@ input.subscription-form-input::placeholder {
   margin-right: 96px;
 }
 .footer-container-item.second {
+  width: 505px;
   margin-right: auto;
 }
 .page-footer-logo {
@@ -1380,6 +1381,7 @@ input.subscription-form-input::placeholder {
 
 .footer-navigation-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 75px auto 0 24px;
   padding: 0;
@@ -1458,7 +1460,7 @@ input.subscription-form-input::placeholder {
   border-radius: 50%;
   color: #444444;
 }
-.button-socials:focus-within {
+.footer-social-item:focus-within {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }

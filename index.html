@@ -20,49 +20,51 @@
                 <button class="site-search-button" type="submit">Найти</button>
               </div>
             </form>
-            <ul class="navigation-user">
-              <h2 class="visually-hidden">Меню пользователя сайта</h2>
-              <li class="navigation-user-item first">
-                <a class="navigation-user-link login hidden" href="#">Войти</a>
-                <a class="navigation-user-link profile" href="#">Коля Петухов</a>
-                <a class="navigation-user-link logout" href="#">Выйти</a>
-              </li>
-              <li class="navigation-user-item">
-                <a class="navigation-user-link compare" href="#">Сравнить</a>
-              </li>
-              <li class="navigation-user-item">
-                <a class="navigation-user-link cart" aria-labelledby="cart-tooltip-label" href="#"><span class="badge">2</span>Корзина</a>
-                <div class="cart-info-popup visible" role="tooltip" id="cart-tooltip-label">
-                  <ul class="popup-cart-item">
-                    <li>
-                      <a href="#" class="popup-cart-item-link">
-                        <img class="popup-cart-item-image" src="images/photos/product-1-small.png" alt="Любительская селфи-палка." width="39" height="43">
-                        <span class="popup-cart-item-text">Любительская<br> селфи-палка</span>
-                      </a>
-                    </li>
-                    <li class="popup-cart-item-delete">
-                      <a href="#" class="item-delete-button"><img class="item-delete-image" src="images/icons/icon-cross-white.svg" width="10" height="11" alt="Удалить из корзины."></a>
-                    </li>
-                  </ul>
-                  <ul class="popup-cart-item">
-                    <li>
-                      <a href="#" class="popup-cart-item-link">
-                        <img class="popup-cart-item-image" src="images/photos/product-2-small.png" alt="Любительская селфи-палка." width="39" height="43">
-                        <span class="popup-cart-item-text">Профессиональная селфи-палка</span>
-                      </a>
-                    </li>
-                    <li class="popup-cart-item-delete">
-                      <a href="#" class="item-delete-button"><img class="item-delete-image" src="images/icons/icon-cross-white.svg" width="10" height="11" alt="Удалить из корзины."></a>
-                    </li>
-                  </ul>
-                  <div class="cart-info-popup-total">
-                    <div class="total-products">Товаров: 2</div>
-                    <div class="total-sum">Сумма: 2000 ₽</div>
+            <section class="navigation-user">
+              <h2 class="visually-hidden">Пользовательское меню</h2>
+              <ul class="navigation-user-list">
+                <li class="navigation-user-item first">
+                  <a class="navigation-user-link login hidden" href="#">Войти</a>
+                  <a class="navigation-user-link profile" href="#">Коля Петухов</a>
+                  <a class="navigation-user-link logout" href="#">Выйти</a>
+                </li>
+                <li class="navigation-user-item">
+                  <a class="navigation-user-link compare" href="#">Сравнить</a>
+                </li>
+                <li class="navigation-user-item">
+                  <a class="navigation-user-link cart" aria-labelledby="cart-tooltip-label" href="#"><span class="badge">2</span>Корзина</a>
+                  <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label">
+                    <ul class="popup-cart-item">
+                      <li>
+                        <a href="#" class="popup-cart-item-link">
+                          <img class="popup-cart-item-image" src="images/photos/product-1-small.png" alt="Любительская селфи-палка." width="39" height="43">
+                          <span class="popup-cart-item-text">Любительская<br> селфи-палка</span>
+                        </a>
+                      </li>
+                      <li class="popup-cart-item-delete">
+                        <a href="#" class="item-delete-button"><img class="item-delete-image" src="images/icons/icon-cross-white.svg" width="10" height="11" alt="Удалить из корзины."></a>
+                      </li>
+                    </ul>
+                    <ul class="popup-cart-item">
+                      <li>
+                        <a href="#" class="popup-cart-item-link">
+                          <img class="popup-cart-item-image" src="images/photos/product-2-small.png" alt="Любительская селфи-палка." width="39" height="43">
+                          <span class="popup-cart-item-text">Профессиональная селфи-палка</span>
+                        </a>
+                      </li>
+                      <li class="popup-cart-item-delete">
+                        <a href="#" class="item-delete-button"><img class="item-delete-image" src="images/icons/icon-cross-white.svg" width="10" height="11" alt="Удалить из корзины."></a>
+                      </li>
+                    </ul>
+                    <div class="cart-info-popup-total">
+                      <div class="total-products">Товаров: 2</div>
+                      <div class="total-sum">Сумма: 2000 ₽</div>
+                    </div>
+                    <a href="#" class="popover-button">Открыть корзину</a>
                   </div>
-                  <a href="#" class="popover-button">Открыть корзину</a>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </section>
           </div>
           <nav class="page-header-navigation">
             <h2 class="visually-hidden">Навигация по сайту</h2>
@@ -115,7 +117,7 @@
           <h2 class="visually-hidden">Слайдер товаров</h2>
           <div class="slider-control">
             <ol class="slider-list">
-              <li class="slider-item hidden">
+              <li class="slider-item">
                 <img class="slider-item-image" src="images/slider/slider-1.png" alt="Примеры работ." width="560" height="560">
                 <div class="slider-item-content">
                   <div class="slider-info-container">
@@ -153,7 +155,7 @@
                   </dl>
                 </div>
               </li>
-              <li class="slider-item">
+              <li class="slider-item hidden">
                 <img class="slider-item-image" src="images/slider/slider-3.png" alt="Примеры работ." width="560" height="560">
                 <div class="slider-item-content">
                   <div class="slider-info-container">
