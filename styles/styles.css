@@ -185,7 +185,8 @@ body {
 .page-header-container {
   position: relative;
   box-sizing: border-box;
-  padding: 43px 44px 0 60px; /*23*/
+  padding: 45px 44px 0 60px;
+  margin: 0;
   background-color: #FFE17F;
 }
 
@@ -210,17 +211,21 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 27px;
+  margin: 0 0 27px 0;
 }
 
 .site-search-form {
-  flex-basis: 515px;
+  min-width: 515px;
+  margin: 0;
+  padding: 0;
 }
 .site-search-input {
   width: 359px;
+  height: 40px;
+  box-sizing: border-box;
   border: 2px solid #000000;
-  border-radius: 50px 0px 0px 50px;
-  padding: 8px 10px 8px 46px;
+  border-radius: 50px 0 0 50px;
+  padding: 6px 10px 6px 46px;
   margin: 0;
   outline: none;
   font-family: inherit;
@@ -244,10 +249,12 @@ body {
   opacity: 0.3;
 }
 .site-search-button {
+  height: 40px;
+  box-sizing: border-box;
   border: 2px solid #000000;
   border-left: none;
   border-radius: 0px 50px 50px 0px;
-  padding: 8px 56px;
+  padding: 8px 57px 7px 55px;
   margin: 0;
   font-size: 16px;
   line-height: 20px;
@@ -266,18 +273,19 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 /***** Navigation User Menu  *****/
-
+.navigation-user {
+  margin: 2px 0 0 0;
+}
 .navigation-user-list {
-  flex-basis: 515px;
+  width: 515px;
   display: flex;
-  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .navigation-user-item {
   position: relative;
-  margin-left: 6px;
+  margin-left: 8px;
 }
 .navigation-user-item.first {
   margin-left: 0;
@@ -288,6 +296,8 @@ body {
   display: inline-block;
   text-decoration: none;
   box-sizing: border-box;
+  font-size: 18px;
+  line-height: 20px;
   color: #000000;
   border: 2px solid #FFE17F;
   padding: 2px 6px 2px 2px;
@@ -350,8 +360,8 @@ body {
 .navigation-user-link .badge {
   position: absolute;
   display: block;
-  top: 9px;
-  left: 4px;
+  top: 4px;
+  left: 3px;
   width: 21px;
   height: 21px;
   border-radius: 10px;
@@ -359,7 +369,7 @@ body {
   line-height: 21px;
   background: #FFFFFF;
   color: #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   z-index: 100;
 }
@@ -375,7 +385,7 @@ body {
 .cart-info-popup {
   display: none;
   position: absolute;
-  top: 15px;
+  top: 11px;
   left: 37px;
   z-index: 120;
   background: #000000;
@@ -392,7 +402,7 @@ body {
 .cart-info-popup:before {
   display: block;
   position: absolute;
-  top: -15px;
+  top: -17px;
   box-sizing: border-box;
   margin-left: -11px;
   left: 50%;
@@ -407,7 +417,7 @@ body {
 .popup-cart-item {
   display: grid;
   grid-template-columns: 270px auto;
-  padding: 20px 0 19px 0;
+  padding: 20px 0 20px 0;
   margin: 0;
   list-style: none;
   box-sizing: border-box;
@@ -418,7 +428,7 @@ body {
 
 .popup-cart-item-link {
   display: grid;
-  grid-template-columns: 63px 187px;
+  grid-template-columns: 62px 186px;
   box-sizing: border-box;
   text-decoration: none;
   padding: 0;
@@ -479,12 +489,11 @@ body {
   align-items: center;
   text-align: center;
   box-sizing: border-box;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 0;
   color: #000000;
   cursor: pointer;
   background-color: #FFFFFF;
-  margin: 20px 20px 0 20px;
+  margin: 21px 20px 0 20px;
 }
 .popover-button:focus {
   outline: 2px solid #AF4FFF;
@@ -548,13 +557,14 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
-  padding: 4px 0 3px 2px;
+  padding: 10px 0 3px 2px;
   margin: 0 0 6px 0;
 }
 .main-menu-item.first .main-menu-link,
 .main-menu-item.first .main-menu-link:active {
   padding: 0;
   margin: 0;
+  z-index: 150;
 }
 .main-menu-item.first .main-menu-link:focus {
   outline-offset: 2px;
@@ -604,7 +614,7 @@ body {
   background-image: url("../images/icons/icon-plus.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  margin-left: 11px;
+  margin-left: 16px;
 }
 .main-menu-item.first .main-menu-link:hover .catalog-icon,
 .main-menu-item.first .main-menu-link:active .catalog-icon{
@@ -623,7 +633,7 @@ body {
   padding: 11px 60px 40px 60px;
   column-gap: 30px;
   position: absolute;
-  top: 54px;
+  top: 52px;
   left: -60px;
   z-index: 112;
   background-color: #FFE17F;
@@ -632,13 +642,12 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 16px;
 }
 .dropdown-menu:first-child {
   width: 222px;
 }
 .dropdown-menu-item {
-  margin: 0 0 17px 0;
+  margin: 0 0 18px 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -660,6 +669,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+
   line-height: 18px;
   color: #000000;
   text-decoration: none;
@@ -689,7 +699,7 @@ body {
 .slider {
   position: relative;
   width: 1160px;
-  margin: 0 auto 100px;
+  margin: 0 auto 70px;
 }
 .slider-control::before {
   content: "";
@@ -699,7 +709,7 @@ body {
   left: 0;
   display: block;
   width: 100%;
-  height: 135px;
+  height: 133px;
   background-color: #FFE17F;
 }
 
@@ -707,7 +717,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: -150px 0 0 0; /*-121*/
+  margin: -150px 0 0 0;
   padding: 0;
   list-style-type: none;
 }
@@ -738,7 +748,7 @@ body {
   top: 0;
   right: 50px;
   z-index: 0;
-  height: 121px;
+  height: 133px;
   line-height: 135px;
   overflow: hidden;
   font-family: 'Rubik', sans-serif;
@@ -770,13 +780,13 @@ body {
   color: #444444;
 }
 .slider-item-more-button {
-  margin-top: 32px;
+  margin-top: 33px;
 }
 .slider-item-parameters-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px,max-content));
-  column-gap: 40px;
-  margin-top: 47px;
+  column-gap: 21px;
+  margin-top: 49px;
   align-content: start;
   font-family: 'Rubik', sans-serif;
   font-style: normal;
@@ -1041,7 +1051,7 @@ body {
 }
 
 .services-description-item-title {
-  margin: 0 0 30px 0;
+  margin: 0 0 32px 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -1052,7 +1062,7 @@ body {
 }
 .services-description-item-text {
   display: block;
-  width: 479px;
+  width: 460px;
   font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1096,7 +1106,7 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
-  margin: 0;
+  margin: 7px 0 0 4px;
   padding: 0;
   display: block;
 }
@@ -1144,7 +1154,7 @@ body {
   margin: 0 auto 70px auto;
 }
 .about-company-item.about-us {
-  width: 520px;
+  width: 500px;
 }
 .about-company-item.our-contacts {
   width: 532px;
@@ -1163,7 +1173,7 @@ body {
   font-size: 50px;
   line-height: 50px;
   color: #000000;
-  margin: 43px 0 47px 0;
+  margin: 41px 0 47px 0;
   padding: 0;
 }
 .about-company-item-subtitle {
@@ -1219,17 +1229,19 @@ body {
 
 .subscription {
   background-color: #F0F0F0;
-  padding: 74px 0 46px 0;
+  padding: 56px 0;
 }
 .subscription-info-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-content: start;
   width: 1160px;
   margin: 0 auto 0 auto;
+  padding: 9px 0 0 0;
 }
 .subscription-title {
-  margin: 0 257px 144px 8px;
+  margin: 0 257px 143px 8px;
   padding: 0;
   width: 342px;
   font-family: 'Raleway', sans-serif;
@@ -1241,14 +1253,14 @@ body {
 }
 .subscription-info {
   padding: 0;
-  margin: 0;
+  margin: 9px 0 0 0;
   width: 532px;
 }
 .subscription-form {
   display: flex;
   margin: 0;
   padding: 0;
-  width: 810px;
+  min-width: 810px;
 }
 .subscription-form-input {
   min-width: 557px;
@@ -1269,9 +1281,10 @@ input.subscription-form-input::placeholder {
 }
 
 .subscription-button {
-  padding: 12px 15px;
-  margin: 0 189px 0 0;
+  width: 252px;
   box-sizing: border-box;
+  padding: 12px 12px 12px 17px;
+  margin: 0;
   outline: none;
   font-size: 18px;
   line-height: 21px;
@@ -1300,7 +1313,7 @@ input.subscription-form-input::placeholder {
   margin: 0 0 0 188px;
   background-image: url("../images/icons/icon-tick.svg");
   background-repeat: no-repeat;
-  background-position-x: 0px;
+  background-position-x: 0;
   background-position-y: 8px;
 }
 /***** Subscription End *****/

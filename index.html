@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
@@ -16,7 +18,7 @@
               <h2 class="visually-hidden">Форма поиска по сайту</h2>
               <div class="search-controls">
                 <label for="site-search-input"></label>
-                <input class="site-search-input" type="search" name="search-field" id="site-search-input" placeholder="Поиск по сайту">
+                <input class="site-search-input" type="search" name="search-field" id="site-search-input" placeholder="Текст поиска">
                 <button class="site-search-button" type="submit">Найти</button>
               </div>
             </form>
@@ -24,16 +26,16 @@
               <h2 class="visually-hidden">Пользовательское меню</h2>
               <ul class="navigation-user-list">
                 <li class="navigation-user-item first">
-                  <a class="navigation-user-link login hidden" href="#">Войти</a>
-                  <a class="navigation-user-link profile" href="#">Коля Петухов</a>
-                  <a class="navigation-user-link logout" href="#">Выйти</a>
+                  <a class="navigation-user-link login" href="#">Войти</a>
+                  <a class="navigation-user-link profile hidden" href="#">Коля Петухов</a>
+                  <a class="navigation-user-link logout hidden" href="#">Выйти</a>
                 </li>
                 <li class="navigation-user-item">
                   <a class="navigation-user-link compare" href="#">Сравнить</a>
                 </li>
                 <li class="navigation-user-item">
                   <a class="navigation-user-link cart" aria-labelledby="cart-tooltip-label" href="#"><span class="badge">2</span>Корзина</a>
-                  <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label">
+                  <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label" style="display: block">
                     <ul class="popup-cart-item">
                       <li>
                         <a href="#" class="popup-cart-item-link">
@@ -118,7 +120,7 @@
           <div class="slider-control">
             <ol class="slider-list">
               <li class="slider-item">
-                <img class="slider-item-image" src="images/slider/slider-1.png" alt="Примеры работ." width="560" height="560">
+                <img class="slider-item-image" src="images/slider/slider-1.png" alt="Порхает как бабочка, жалит как пчела!" width="560" height="560">
                 <div class="slider-item-content">
                   <div class="slider-info-container">
                     <span class="slider-product-number">01</span>
@@ -139,7 +141,7 @@
                 </div>
               </li>
               <li class="slider-item hidden">
-                <img class="slider-item-image" src="images/slider/slider-2.png" alt="Примеры работ." width="560" height="560">
+                <img class="slider-item-image" src="images/slider/slider-2.png" alt="Худеем правильно!" width="560" height="560">
                 <div class="slider-item-content">
                   <div class="slider-info-container">
                     <span class="slider-product-number">02</span>
@@ -156,7 +158,7 @@
                 </div>
               </li>
               <li class="slider-item hidden">
-                <img class="slider-item-image" src="images/slider/slider-3.png" alt="Примеры работ." width="560" height="560">
+                <img class="slider-item-image" src="images/slider/slider-3.png" alt="Самая длинная палка для селфи." width="560" height="560">
                 <div class="slider-item-content">
                   <div class="slider-info-container">
                     <span class="slider-product-number">03</span>
@@ -301,10 +303,10 @@
             <a class="button-fade about-us-button" href="#">Подробнее о нас</a>
           </section>
           <section class="about-company-item our-contacts">
-            <h3 class="about-company-item-title">Контакты компании</h3>
+            <h3 class="about-company-item-title">Контакты</h3>
             <p class="description">Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить работоспособность покупки.</p>
             <h4 class="about-company-item-subtitle">Интернет-магазин «Девайс»</h4>
-            <p class="description">Санкт-Петербург, набережная реки Карповки, 5, литера П.<br><a class="phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
+            <p class="description">Санкт-Петербург, набережная реки Карповки, 5, литера П.<br><a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
             <h4 class="about-company-item-subtitle">Время работы</h4>
             <p class="description">пн—пт: с 10:00 до 22:00<br>сб—вс: с 10:00 до 19:00</p>
             <a class="button-fade contacts-button" href="#">Напишите нам</a>
