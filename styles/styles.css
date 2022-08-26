@@ -623,8 +623,8 @@ body {
   background-position: center center;
   margin-left: 16px;
 }
-.main-menu-item.first .main-menu-link:hover .catalog-icon,
-.main-menu-item.first .main-menu-link:active .catalog-icon{
+.main-menu-link:hover .catalog-icon,
+.main-menu-link:active .catalog-icon{
   opacity: 1;
 }
 .main-menu-item.active .catalog-icon {
