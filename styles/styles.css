@@ -304,16 +304,15 @@ body {
 .user-navigation {
   display: grid;
   width: 230px;
-  gap: 28px;
-  grid-template-columns: auto auto;
-  align-self: center;
-  margin: 2px 0 0 0;
+  column-gap: 28px;
+  grid-template-columns: auto 1fr;
+  margin: 6px 0 0 0;
 }
 
 .user-navigation-link {
   text-decoration: none;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 30px;
   color: #000000;
 }
 .user-navigation-link:focus {
@@ -357,18 +356,17 @@ body {
 /** Cart Navigation **/
 .cart-navigation {
   display: grid;
-  width: auto;
-  gap: 34px;
+  width: 241px;
+  column-gap: 19px;
   grid-template-columns: auto auto;
-  align-self: center;
-  margin: 1px 16px 0 0;
+  margin: 6px 16px 0 0;
 }
 
 .cart-navigation-link {
   position: relative;
   text-decoration: none;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 30px;
   color: #000000;
 }
 
@@ -404,17 +402,17 @@ body {
   vertical-align: baseline;
   margin-right: 12px;
   width: 16px;
-  height: 14px;
+  height: 16px;
   background-image: url("../images/icons/icon-cart.svg");
   background-repeat: no-repeat;
-  background-position: 0 center;
+  background-position: 0 0;
 }
 
 .cart-navigation-link .badge {
   position: absolute;
   display: block;
-  top: -2px;
-  left: -18px;
+  top: 4px;
+  left: 0;
   width: 21px;
   height: 21px;
   border-radius: 10px;
@@ -425,6 +423,20 @@ body {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
   z-index: 100;
+}
+
+.cart-navigation-link.cart {
+  margin-left: 0;
+  padding-left: 15px;
+}
+
+.cart-navigation-link.cart.empty {
+  margin-left: 15px;
+  padding-left: 0;
+}
+
+.cart-navigation-link.cart.empty .badge {
+  display: none;
 }
 
 /** Cart Info PopUp **/
