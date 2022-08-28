@@ -24,11 +24,13 @@
               </div>
             </form>
             <section class="user-navigation">
+              <h2 class="visually-hidden">Меню авторизации на сайте</h2>
               <a class="user-navigation-link login" href="#">Войти</a>
               <a class="user-navigation-link profile hidden" href="#">Коля Петухов</a>
               <a class="user-navigation-link logout hidden" href="#">Выйти</a>
             </section>
             <section class="cart-navigation">
+              <h2 class="visually-hidden">Навигация для корзины</h2>
               <a class="cart-navigation-link compare" href="#">Сравнить</a>
               <a class="cart-navigation-link cart" aria-labelledby="cart-tooltip-label" href="#"><span class="badge">2</span>Корзина</a>
               <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label">
@@ -64,16 +66,16 @@
           </div>
           <nav class="page-header-navigation">
             <h2 class="visually-hidden">Навигация по сайту</h2>
-            <ul class="header-main-menu">
-              <li class="main-menu-item first">
-                <a class="main-menu-link catalog-link" href="#">Каталог товаров<span class="catalog-icon"></span></a>
+            <div class="header-main-menu">
+              <div class="catalog">
+                <a class="catalog-link active" href="#">Каталог товаров<span class="catalog-icon"></span></a>
                 <div class="dropdown-menu-container">
                   <ul class="dropdown-menu">
                     <li class="dropdown-menu-item">
                       <a class="dropdown-menu-link" href="#">Виртуальная реальность</a>
                     </li>
                     <li class="dropdown-menu-item">
-                      <a class="dropdown-menu-link" href="#">Моноподы для селфи</a>
+                      <a class="dropdown-menu-link active" href="#">Моноподы для селфи</a>
                     </li>
                     <li class="dropdown-menu-item">
                       <a class="dropdown-menu-link" href="#">Экшн-камеры</a>
@@ -93,18 +95,20 @@
                     </li>
                   </ul>
                 </div>
-              </li>
-              <li>&nbsp;</li>
-              <li class="main-menu-item">
-                <a class="main-menu-link" href="#">Доставка</a>
-              </li>
-              <li class="main-menu-item">
-                <a class="main-menu-link" href="#">Гарантия</a>
-              </li>
-              <li class="main-menu-item">
-                <a class="main-menu-link" href="#">Контакты</a>
-              </li>
-            </ul>
+              </div>
+              <div></div>
+              <ul class="main-menu-navigation">
+                <li class="main-menu-item">
+                  <a class="main-menu-link" href="#">Доставка</a>
+                </li>
+                <li class="main-menu-item">
+                  <a class="main-menu-link active" href="#">Гарантия</a>
+                </li>
+                <li class="main-menu-item">
+                  <a class="main-menu-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
           </nav>
         </div>
       </header>
@@ -117,11 +121,30 @@
                 <img class="slider-item-image" src="images/slider/slider-1.png" alt="Порхает как бабочка, жалит как пчела!" width="560" height="560">
                 <div class="slider-item-content">
                   <div class="slider-info-container">
-                    <span class="slider-product-number">01</span>
+                    <div class="slider-product-number">01</div>
                     <h3 class="slider-item-title">Порхает как бабочка, жалит как пчела!</h3>
+                    <p class="slider-item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
                   </div>
-                  <p class="slider-item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-                  <a class="button-fade slider-item-more-button" href="#">Подробнее</a>
+                  <div class="slider-controls">
+                    <a class="button-fade slider-item-more-button" href="#">Подробнее</a>
+                    <ol class="slider-pagination">
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                          <span class="visually-hidden">1 фото</span>
+                        </button>
+                      </li>
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button" type="button">
+                          <span class="visually-hidden">2 фото</span>
+                        </button>
+                      </li>
+                      <li class="slider-pagination-item">
+                        <button class="slider-pagination-button" type="button">
+                          <span class="visually-hidden">3 фото</span>
+                        </button>
+                      </li>
+                    </ol>
+                  </div>
                   <dl class="slider-item-parameters-list">
                     <div class="parameters-list-item">
                       <dt class="list-item-name">Дальность полета</dt>
@@ -185,23 +208,6 @@
                 <span class="visually-hidden">Следующее фото</span>
               </button>
             </div>
-            <ol class="slider-pagination">
-              <li class="slider-pagination-item">
-                <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                  <span class="visually-hidden">1 фото</span>
-                </button>
-              </li>
-              <li class="slider-pagination-item">
-                <button class="slider-pagination-button" type="button">
-                  <span class="visually-hidden">2 фото</span>
-                </button>
-              </li>
-              <li class="slider-pagination-item">
-                <button class="slider-pagination-button" type="button">
-                  <span class="visually-hidden">3 фото</span>
-                </button>
-              </li>
-            </ol>
           </div>
         </section>
         <section class="categories">
