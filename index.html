@@ -16,53 +16,50 @@
             <form class="site-search-form" method="get" action="https://echo.htmlacademy.ru">
               <h2 class="visually-hidden">Форма поиска по сайту</h2>
               <label for="site-search-input"></label>
-              <input class="site-search-input" type="search" name="search-field" id="site-search-input" placeholder="Текст поиска">
-              <button class="site-search-button" type="submit">Найти</button>
+              <div class="site-search-input-focus-wrapper">
+                <input class="site-search-input" type="search" name="search-field" id="site-search-input" placeholder="Текст поиска" required>
+              </div>
+              <div class="site-search-button-focus-wrapper">
+                <button class="site-search-button" type="submit">Найти</button>
+              </div>
             </form>
-            <section class="navigation-user">
-              <h2 class="visually-hidden">Пользовательское меню</h2>
-              <ul class="navigation-user-list">
-                <li class="navigation-user-item first">
-                  <a class="navigation-user-link login" href="#">Войти</a>
-                  <a class="navigation-user-link profile hidden" href="#">Коля Петухов</a>
-                  <a class="navigation-user-link logout hidden" href="#">Выйти</a>
-                </li>
-                <li class="navigation-user-item">
-                  <a class="navigation-user-link compare" href="#">Сравнить</a>
-                </li>
-                <li class="navigation-user-item">
-                  <a class="navigation-user-link cart" aria-labelledby="cart-tooltip-label" href="#"><span class="badge">2</span>Корзина</a>
-                  <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label">
-                    <ul class="popup-cart-item">
-                      <li>
-                        <a href="#" class="popup-cart-item-link">
-                          <img class="popup-cart-item-image" src="images/photos/product-1-small.png" alt="Любительская селфи-палка." width="39" height="43">
-                          <span class="popup-cart-item-text">Любительская<br> селфи-палка</span>
-                        </a>
-                      </li>
-                      <li class="popup-cart-item-delete">
-                        <a href="#" class="item-delete-button"><img class="item-delete-image" src="images/icons/icon-cross-white.svg" width="10" height="11" alt="Удалить из корзины."></a>
-                      </li>
-                    </ul>
-                    <ul class="popup-cart-item">
-                      <li>
-                        <a href="#" class="popup-cart-item-link">
-                          <img class="popup-cart-item-image" src="images/photos/product-2-small.png" alt="Любительская селфи-палка." width="39" height="43">
-                          <span class="popup-cart-item-text">Профессиональная селфи-палка</span>
-                        </a>
-                      </li>
-                      <li class="popup-cart-item-delete">
-                        <a href="#" class="item-delete-button"><img class="item-delete-image" src="images/icons/icon-cross-white.svg" width="10" height="11" alt="Удалить из корзины."></a>
-                      </li>
-                    </ul>
-                    <div class="cart-info-popup-total">
-                      <div class="total-products">Товаров: 2</div>
-                      <div class="total-sum">Сумма: 2000 ₽</div>
-                    </div>
-                    <a href="#" class="popover-button">Открыть корзину</a>
-                  </div>
-                </li>
-              </ul>
+            <section class="user-navigation">
+              <a class="user-navigation-link login" href="#">Войти</a>
+              <a class="user-navigation-link profile hidden" href="#">Коля Петухов</a>
+              <a class="user-navigation-link logout hidden" href="#">Выйти</a>
+            </section>
+            <section class="cart-navigation">
+              <a class="cart-navigation-link compare" href="#">Сравнить</a>
+              <a class="cart-navigation-link cart" aria-labelledby="cart-tooltip-label" href="#"><span class="badge" style="display: none">2</span>Корзина</a>
+              <div class="cart-info-popup" role="tooltip" id="cart-tooltip-label">
+                <ul class="popup-cart-item">
+                  <li>
+                    <a href="#" class="popup-cart-item-link">
+                      <img class="popup-cart-item-image" src="images/photos/product-1-small.png" alt="Любительская селфи-палка." width="39" height="43">
+                      <span class="popup-cart-item-text">Любительская<br> селфи-палка</span>
+                    </a>
+                  </li>
+                  <li class="popup-cart-item-delete">
+                    <a href="#" class="item-delete-button"><img class="item-delete-image" src="images/icons/icon-cross-white.svg" width="10" height="11" alt="Удалить из корзины."></a>
+                  </li>
+                </ul>
+                <ul class="popup-cart-item">
+                  <li>
+                    <a href="#" class="popup-cart-item-link">
+                      <img class="popup-cart-item-image" src="images/photos/product-2-small.png" alt="Любительская селфи-палка." width="39" height="43">
+                      <span class="popup-cart-item-text">Профессиональная селфи-палка</span>
+                    </a>
+                  </li>
+                  <li class="popup-cart-item-delete">
+                    <a href="#" class="item-delete-button"><img class="item-delete-image" src="images/icons/icon-cross-white.svg" width="10" height="11" alt="Удалить из корзины."></a>
+                  </li>
+                </ul>
+                <div class="cart-info-popup-total">
+                  <div class="total-products">Товаров: 2</div>
+                  <div class="total-sum">Сумма: 2000 ₽</div>
+                </div>
+                <a href="#" class="popover-button">Открыть корзину</a>
+              </div>
             </section>
           </div>
           <nav class="page-header-navigation">
@@ -315,7 +312,7 @@
             <p class="subscription-info">Еженедельный дайджест с обзорами новинок,<br>длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
             <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
               <label for="subscription-form-email" class="visually-hidden">Ваш e-mail</label>
-              <input class="subscription-form-input" type="email" name="subscription-form-email" id="subscription-form-email" placeholder="Ваш e-mail">
+              <input class="subscription-form-input" type="email" name="subscription-form-email" id="subscription-form-email" placeholder="Ваш e-mail" required>
               <button class="button subscription-button" type="submit">ПОДПИСАТЬСЯ</button>
             </form>
             <span class="mark">Это бесплатно</span>
