@@ -1435,11 +1435,11 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  min-width: 810px;
+  width: 810px;
 }
 .subscription-form-input {
   min-width: 557px;
-  height: 57px;
+  min-height: 57px;
   box-sizing: border-box;
   padding: 12px 10px 13px 17px;
   border: none;
@@ -1456,7 +1456,6 @@ input.subscription-form-input::placeholder {
 }
 
 .subscription-button {
-  width: 252px;
   box-sizing: border-box;
   padding: 12px 12px 12px 17px;
   margin: 0;
