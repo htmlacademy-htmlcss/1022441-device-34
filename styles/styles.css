@@ -1184,6 +1184,7 @@ body {
 }
 
 .services-navigation-item.current .services-button {
+  background-color: #000000;
   color: #FFE17F;
 }
 
