@@ -1702,6 +1702,7 @@ input.subscription-form-input::placeholder {
 }
 
 .footer-navigation-link {
+  display: block;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -1781,11 +1782,53 @@ input.subscription-form-input::placeholder {
   color: #444444;
 }
 
-.button-socials.telegram {
+.button-socials.telegram::after {
+  display: block;
+  content: '';
   background-image: url("../images/icons/telegram.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
+  width: 12px;
+  height: 14px;
+}
+
+.button-socials.telegram:active::after {
+  background-image: url("../images/icons/telegram-active.svg");
+}
+
+.button-socials.youtube::after {
+  display: block;
+  content: '';
+  background-image: url("../images/icons/youtube.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  width: 16px;
+  height: 11px;
+}
+
+.button-socials.youtube:active::after {
+  background-image: url("../images/icons/youtube-active.svg");
+}
+
+.button-socials.twitter::after {
+  display: block;
+  content: '';
+  background-image: url("../images/icons/twitter.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  width: 15px;
+  height: 15px;
+}
+
+.button-socials.twitter:active::after {
+  background-image: url("../images/icons/twitter-active.svg");
+}
+
+.button-socials:focus {
+  outline: none;
 }
 
 .footer-social-item:focus-within {
@@ -1795,10 +1838,6 @@ input.subscription-form-input::placeholder {
 
 .button-socials:hover {
   background-color: #FFC700;
-}
-
-.button-socials:active {
-  color: rgba(68, 68, 68, 0.3)
 }
 
 .footer-phone {
